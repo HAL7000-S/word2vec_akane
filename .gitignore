@@ -1,0 +1,53 @@
+# === Gitで無視するディレクトリ ===
+model/
+test_space/
+voice_set/
+
+# === Python: 基本的な除外項目 ===
+
+# Pythonのキャッシュファイル
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 仮想環境（venv, .venv など）
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Jupyter Notebookのチェックポイント
+.ipynb_checkpoints/
+
+# VSCodeやPyCharmなどIDEの設定
+.vscode/
+.idea/
+
+# ログファイル
+*.log
+
+# OSによる一時ファイル
+.DS_Store
+Thumbs.db
+
+# テストによる出力ファイル
+*.out
+*.tmp
+
+# pipenv / poetry / pyenv 関連
+Pipfile.lock
+poetry.lock
+.python-version
+
+# coverageやpytest関連
+.coverage
+htmlcov/
+.cache/
+.pytest_cache/
+
+# mypyやその他の静的解析出力
+.mypy_cache/
+.dmypy.json
+.pyre/

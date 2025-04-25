@@ -2,7 +2,7 @@ import MeCab
 from gensim.models import KeyedVectors
 import time
 
-# データベース
+# モデルデータの例
 # https://www.cl.ecei.tohoku.ac.jp/~m-suzuki/jawiki_vector/
 
 import tkinter as tk
@@ -14,7 +14,7 @@ base_image = Image.open("base.png")
 speek_image = Image.open("speek.png")
 
 class TalkSystem:
-    def __init__(self, model_path='./entity_vector.model.bin'):
+    def __init__(self, model_path='./model/entity_vector.model.bin'):
     
         self.model = KeyedVectors.load_word2vec_format(model_path, binary=True)
 
@@ -83,7 +83,7 @@ class App:
         self.root.title("かんたん あいづち あかねちゃん")
 
         # 外に準備した関数立ち上げ
-        model_path = './entity_vector.model.bin'  # KeyedVectors形式
+        model_path = './model/entity_vector.model.bin'  # KeyedVectors形式
         self.talk_system = TalkSystem(model_path)
 
         # フレーム構成
